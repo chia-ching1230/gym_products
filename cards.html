@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@672&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: "Noto Serif TC";
+        }
+
+    .profile-card {
+    width: 228px; /* 403px * 2/3 */
+    height: 271px;
+    padding-top: 79px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-card-container {
+    background-color: #0b3760;
+    display: flex;
+    margin-top: 79px;
+    height: 200px; /* 384px * 2/3 */
+    padding-bottom: 45px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.profile-image {
+    aspect-ratio: 0.98;
+    object-fit: contain;
+    width: 150px; /* 248px * 2/3 */
+    border-radius: 50%; /* 126px * 2/3 */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.profile-name {
+    width: 146px; /* 219px * 2/3 */
+    font-size: 23px; /* 35px * 2/3 */
+    color: #fff;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: "Noto Serif TC";
+}
+
+.profile-divider {
+    border: 0;
+    border-top: 1px solid #fff;
+    margin-top: 12px;
+    width: 90%; /* 344px * 2/3 */
+}
+
+.profile-description-wrapper {
+    display: flex;
+    margin-top: 3px;
+    height: 49px; /* 73px * 2/3 */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-description {
+    padding: 0px 20px;
+    font-size: 12px; /* 18px * 2/3 */
+    color: #fff;
+    line-height: 20px;
+    flex: 1;
+    margin: 0;
+    font-family: "Noto Serif TC";
+}
+
+.profile-arrow {
+    border-radius: 24px;
+    background-color: #faf0ca;
+    position: absolute;
+    padding: 0 7px;
+    font-size: 13px; /* 20px * 2/3 */
+    color: #828181;
+    font-weight: 700;
+    width: 23px; /* 34px * 2/3 */
+    height: 23px; /* 34px * 2/3 */
+    right: 15px;
+    bottom: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+.profile-card-container .circle{
+    width: 170px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.favorite-button {
+            background: #E76317;
+            border: none;
+            color: white;
+            padding: 6px;
+            width: 60%;
+            cursor: pointer;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <article class="profile-card">
+        <div class="profile-card-container">
+            <div class="circle">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/d911fa2e8d3b445bbfef81062c5ba1d9/f9e6837ed535211e3d44b91a4feeb64af1ee5d3429b56cf6f84f0c0ff32698e4?placeholderIfAbsent=true"
+                  alt="Profile photo of Yang Xiaoqing"
+                  class="profile-image"
+                />
+            </div>
+          <h1 class="profile-name">楊曉晴</h1>
+          <hr class="profile-divider" />
+          <section class="profile-description-wrapper">
+            <p class="profile-description">
+              我是一名重訓愛好者，最近正在增肌訓練，平時每週3次跑步，...
+            </p>
+            <span class="profile-arrow">&gt;</span>
+            <button class="favorite-button">加入我的收藏</button>
+          </section>
+        </div>
+      </article>
+
+      
+      
+</body>
+</html>

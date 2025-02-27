@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美式風格商品頁</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@672&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <style>
+
+        body {
+            font-family: "Noto Serif TC", serif;
+            font-optical-sizing: auto;
+            font-weight: 672;
+            font-size: 30px;
+            font-style: normal;
+            background-color: #e3eaec;
+            color: #144851;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #082A4D;
+            padding: 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #EE964B;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #EE964B
+            ;
+            font-weight: bold;
+        }
+        .product-detail {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+        }
+        .product-gallery img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        .product-info {
+            max-width: 400px;
+        }
+        .price {
+            font-size: 20px;
+            color: #EE964B;
+        }
+        .add-to-cart {
+            background-color: #EE964B;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .related-products {
+            text-align: center;
+            padding: 20px;
+        }
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #082A4D;
+            text-align: center;
+            padding: 15px;
+        }
+        section .product-gallery{
+            width:50%;
+        }
+        section .product-gallery img{
+            width: 100%;
+        }
+        .description{
+            padding: 10px;
+            border-radius: 20px;
+            background-color: #ebc6a5;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const thumbnails = document.querySelectorAll(".thumbnails img");
+            const mainImage = document.querySelector(".product-gallery img");
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener("click", () => {
+                    mainImage.src = thumbnail.src;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <nav>
+            <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">商品分類</a></li>
+                <li><a href="#">最新商品</a></li>
+                <li><a href="#">特價優惠</a></li>
+                <li><a href="#">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="product-detail">
+            <div class="product-gallery">
+                <img src="./img/product1-1.jpg" alt="商品圖片">
+                <div class="thumbnails">
+                    <img src="thumb1.jpg" alt="縮圖1">
+                    <img src="thumb2.jpg" alt="縮圖2">
+                    <img src="thumb3.jpg" alt="縮圖3">
+                </div>
+            </div>
+            <div class="product-info">
+                <h1>商品名稱</h1>
+                <p class="price">NTD 100/天</p>
+                <p class="description">這是一個美式風格的商品介紹，簡潔有力的說明商品的特色與用途。</p>
+                <div class="rental">
+                    <label for="rental-start">租借開始日期:</label>
+                    <input type="date" id="rental-start">
+                    <br>
+                    <label for="rental-end">租借結束日期:</label>
+                    <input type="date" id="rental-end">
+                </div>
+                <button class="add-to-cart">加入購物車</button>
+            </div>
+        </section>
+        
+        <section class="related-products">
+            <h2>相關商品</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="related1.jpg" alt="相關商品1">
+                    <p>商品名稱</p>
+                    <p>價格</p>
+                </div>
+                <div class="product">
+                    <img src="related2.jpg" alt="相關商品2">
+                    <p>商品名稱</p>
+                    <p>價格</p>
+                </div>
+                <div class="product">
+                    <img src="related3.jpg" alt="相關商品3">
+                    <p>商品名稱</p>
+                    <p>價格</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 美式風格商城. 版權所有.</p>
+    </footer>
+</body>
+</html>

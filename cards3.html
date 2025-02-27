@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
+    <style>
+
+body {
+    font-family: "Noto Serif TC";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.product-card {
+    background-color: #0b3760;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    width: 228px; /* 401px * 2/3 */
+    height: 271px;
+    padding: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.169;
+    height: 170px; /* 326px * 2/3 */
+    overflow: hidden;
+}
+
+.image-container figure{
+    margin: 3px;
+}
+
+.product-image {
+
+width: 100%;
+object-fit: cover;
+}
+
+/* .like-button-wrapper {
+    position: relative;
+    border-radius: 50px;
+    background: #fff;
+    width: 36px; 
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+} */
+
+.like-icon {
+    width: 100%;
+    aspect-ratio: 1.08;
+    object-fit: contain;
+}
+
+.product-details {
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px; /* 30px * 2/3 */
+    font-weight: 600;
+}
+
+.product-description {
+    color: #d9d9d9;
+    margin: 5px;
+    font-size: 12px;
+
+}
+
+.add-to-cart-button {
+    background-color: #e76317;
+    
+    width: 60%; /* 168px * 2/3 */
+    padding: 5px 29px; /* 8px 43px * 2/3 */
+    border: none;
+    color: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+.product-title , .product-price, .title-separator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  margin: 3px;
+}
+.content-divider{
+  margin: 0;
+}
+    </style>
+</head>
+<body>
+    <article class="product-card">
+        <div class="image-container">
+            <figure >
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/d911fa2e8d3b445bbfef81062c5ba1d9/a2e4ab0ffca8c896abefdab1f415822b7b00547c5c5730a462d8cd6dd7918576?placeholderIfAbsent=true"
+                alt="Product image"
+                class="product-image"
+              />
+            </figure>
+        </div>
+        <section class="product-details">  
+          <div class="product-header">
+            <h2 class="product-title">拳擊手套</h2>
+            <span class="title-separator">|</span>
+            <p class="product-price">45.00NTD/day</p>
+          </div>
+          <hr class="content-divider" />
+          <p class="product-description">高品質拳擊手套，適合訓練或比賽。</p>
+          <button class="add-to-cart-button">加入購物車</button>
+        </section>
+      </article>
+</body>
+</html>
